@@ -1,0 +1,10 @@
+import 'package:dartz/dartz.dart';
+import 'package:project_sound_wave/camada_dados/dados/sources/song/servico_firebase_musica.dart';
+import 'package:project_sound_wave/nucleo/service_locator.dart';
+
+class AdicionarOuRemoverMusicaFavoritaCasoDeUso {
+  Future<Either> chamar({required String parametros}) async {
+    return await localizadorDeServicos<ServicoFirebaseMusica>()
+        .adicionarOuRemoverFavorita(parametros);
+  }
+}
